@@ -2,16 +2,6 @@ name: Deploy API
 
 # Only run this workflow when the API directory changes
 on:
-  push:
-    paths:
-      - 'api/**'
-      - 'docs/.vitepress/types/Feedback.ts'
-      - 'nitro.config.ts'
-      - 'wrangler.toml'
-      - 'package.json'
-      - 'pnpm-lock.yaml'
-    branches:
-      - main
   workflow_dispatch:
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
